@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#submit #exit {  
+    margin-left: 22px;
+    margin-top: 1px;   
+}
+
+
+
+#t01 th {
+  background-color: black;
+  color: white;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: centre;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 6000px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div style = "color: black">
+    <h2 style = "text-align:center">Contact Us</h2>
+    <p style = "text-align:center">Get in touch with me:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <table style="width:100%" id="t01">
+      <tr>
+        <th>Name</th>
+        <th>Contact</th>
+      </tr>
+       <tr>
+
+       <br> 
+
+
+
+         <td>
+         <ul>
+         <li style="color:red;">Yeni Waliatin</li>
+         <li style="color:green;">Augusta</li>
+         </ul>
+	
+         
+         <td>
+         <ul>
+         <li style="color:red;"><a href = "https://mail.google.com/mail/u/0/?hl=en"> 
+          tintinwaliatin@gmail.com</a></li>
+         <li style="color:green;"><a href="mailto:ywaliatin@deakin.edu.au">ywaliatin@deakin.edu.au</a></li>
+         </ul>
+         
+         
+         </td>
+      </tr>
+      </table>
+  <tr>
+      <p style = "color: red">Or submit an enquiry:</p>
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="lemail">Email Address</label>
+        <input type="text" id="lemail" placeholder="Your email address..">
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write enquiry.." style="height:170px"></textarea>
+      </form>
+    </div>
+    <head>
+    <meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<title>Popup</title>
+    </head>
+   <button id = "submit" onclick = 'openWindow(modal)'>Submit</button>
+   <div class="modal" id="modal">
+    <div class="modal-header">
+       <div class="title">Form ID: 123test</div>
+       <button onclick = 'closeWindow(modal)'>Exit</button>
+       </div>
+  <div class="modal-body">
+  Thank you for contacting me!<br> 
+  I will be in contact with you within 1-4 business days.
+  </div>
+ </div>
+ <div id="overlay"></div>
+ </div>
+</div>
+</body>
+<script>
+overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active')
+    modals.forEach(modal => {
+      closeWindow(modal)
+    })
+  })
+
+  function openWindow(modal) {
+    modal.classList.add('active')
+    overlay.classList.add('active')
+  }
+
+  function closeWindow(modal) {
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
+  }
+</script>
+</html>
