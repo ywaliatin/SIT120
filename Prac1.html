@@ -77,8 +77,76 @@ table, th, td {
   
 
     <h2 style = "text-align:center">SIT 120 Introduction to Responsive Website</h2>
-    <p style = "text-align:center">My First Task:</p>
+    
   </div>
+
+<h3> Calculate the total score </h3>
+</head>
+<body>
+    <form name="formcalc">
+	Score 1: <input type="text" name="txtnum1">
+  <br>
+	Score 2: <input type="text" name="txtnum2">
+	<br>
+        Score 3: <input type="text" name="txtnum3">
+  <br>
+  <br>
+	
+
+	<input type="button" value="Click for total" onClick="sumValues()">
+  <input type="text" name="txtres">
+
+<br>
+<br>
+
+
+
+
+
+
+<p id="demo"></p>
+
+   </form>
+
+   <script type="text/javascript">
+
+	function sumValues()
+	{
+	    var num1, num2, num3, res, avg;
+      
+     
+	    num1=Number(document.formcalc.txtnum1.value);
+	    num2=Number(document.formcalc.txtnum2.value);
+            num3=Number(document.formcalc.txtnum3.value);
+	    res=num1+num2+num3;
+	    avg=res/3;
+	    document.formcalc.txtres.value=res;
+
+     
+  
+if (avg <= 60 ) 
+{
+ grade="Fail";
+}  
+
+else  (avg > 60)
+{
+    grade = "Pass";
+  } 
+
+
+
+
+document.getElementById("demo").innerHTML = ("The grade is: " + grade);
+
+
+
+
+      
+ 	}
+   </script>
+
+<h3 style = "text-align:center">Get in touch with me!</h3>
   <div class="row">
     <div class="column">
       <table style="width:100%" id="t01">
@@ -162,3 +230,8 @@ overlay.addEventListener('click', () => {
   }
 </script>
 </html>
+
+
+
+
+
