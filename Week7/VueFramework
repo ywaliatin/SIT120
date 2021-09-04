@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <form id="find">
+        <h2 > {{tittle0}} {{tittle}} </h2>
+        <!--text-->
+
+        <p> <i><span>Suburb </span></i>
+            <input type="text" v-model.lazy="msg">
+            {{msg}}
+        </p>
+        <!--checkbox-->
+        <p> <i><span>Please check list your avaibility {{ checked }} {{ checked1 }}</span></i></p>
+        <p>
+            <input type="checkbox" id="Mon" value="Mon" v-model="checked" />
+            <label for="Mon">Mon</label>
+            <input type="checkbox" id="Tues" value="Tues" v-model="checked" />
+            <label for="Tues">Tues</label>
+            <input type="checkbox" id="Wed" value="Wed" v-model="checked" />
+            <label for="Wed">Wed</label>
+            <input type="checkbox" id="Thurs" value="Thurs" v-model="checked" />
+            <label for="Thurs">Thurs</label>
+            <input type="checkbox" id="Fri" value="Fri" v-model="checked" />
+            <label for="Fri">Fri</label>
+            <input type="checkbox" id="Satur" value="Satur" v-model="checked" />
+            <label for="Satur">Satur</label>
+            <input type="checkbox" id="Sun" value="Sun" v-model="checked" />
+            <label for="Sun">Sun</label>
+            <br />
+            </div>
+        </p>
+
+        <p>
+            <input type="checkbox" id="8-10am" value="8-10am" v-model="checked1" />
+            <label for="8-10am">8-10am</label>
+            <input type="checkbox" id="10-12am" value="10-12am" v-model="checked1" />
+            <label for="10-12am">10-12am</label>
+            <input type="checkbox" id="12-2pm" value="12-2pm" v-model="checked1" />
+            <label for="12-2pm">12-2pm</label>
+            <input type="checkbox" id="2-4pm" value="2-4pm" v-model="checked1" />
+            <label for="2-4pm">2-4pm</label>
+            <input type="checkbox" id="4-6pm" value="4-6pm" v-model="checked1" />
+            <label for="4-6pm">4-6pm</label>
+            <br />
+            </div>
+        </p>
+
+        <!--radio button-->
+        <p> <i><span>Avaibility in the evening </span></i>
+            <input type="radio" name="picked" value="Yes" v-model="picked">
+            <input type="radio" name="picked" value="No" v-model="picked">
+            {{picked}}
+        </p>
+        <!--select-->
+        <p> <i><span>Baby gender </span></i>
+            <select v-if="selected">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+            {{selected}}
+        </p>
+
+        <p> <i><span>Example of V-IF Model </span></i></p>
+            <span v-if="seen"> Yes, my baby gender is a male </span>
+            <span v-if> Yes, my baby gender is a female </span>
+
+    </form>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#find',
+        data: {
+            msg: '',
+            checked: [],
+            checked1: [],
+            picked: 'Yes',
+            tittle:'Find Your Bubsplaydate!',
+            tittle0 :'(Using Rendering example)',
+            selected: 'Male',
+            seen:true
+        }
+    })
+</script>
+
+</html>
+
+
+
+
+<style>
+    #find {
+        margin-left: 10cm;
+        display: center;
+        padding-top: 2cm;
+        padding-bottom: 2cm;
+    }
+
+    #find h2 {
+        color: rgb(147, 192, 73);
+    }
+</style>
